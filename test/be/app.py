@@ -8,10 +8,7 @@ app = Flask(__name__,static_url_path='')
 CORS(app)
 
 dp = dataProcess()
-try:
-    dp.db()
-except:
-    pass
+dp.db()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -29,6 +26,6 @@ def yesOrNo():
 
 def run():
     if __name__ == '__main__':
-        app.run(host='0.0.0.0', debug=True)
+        app.run(host='0.0.0.0', port=8081, debug=True)
 
 run()
