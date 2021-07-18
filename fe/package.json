@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "vant": "^2.12.24",
+    "vue-axios": "^3.2.4"
+  }
+}
