@@ -8,6 +8,7 @@ class dataProcess:
 
     def db(self, **kwargs):
         dbhost = kwargs["dbhost"]
+        dbport = kwargs["dbport"]
         dbuser = kwargs["dbuser"]
         dbpass = kwargs["dbpass"]
         dbname = kwargs["dbname"]
@@ -15,6 +16,7 @@ class dataProcess:
                                      user=dbuser,
                                      password=dbpass,
                                      database=dbname,
+                                     port=dbport,
                                      charset='utf8mb4',
                                      cursorclass=pymysql.cursors.DictCursor)
         self.dbc = connection

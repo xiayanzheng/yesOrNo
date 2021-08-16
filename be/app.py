@@ -11,6 +11,7 @@ CORS(app)
 
 dbconfig = {
     "dbhost": os.environ.get('dbhost', '127.0.0.2'),
+    "dbport": os.environ.get('dbport', '3306'),
     "dbuser": os.environ.get('dbuser', 'root'),
     "dbpass": os.environ.get('dbpass', 'lf'),
     "dbname": os.environ.get('dbname', 'yesorno')
