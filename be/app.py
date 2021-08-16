@@ -2,8 +2,6 @@ from flask import Flask
 from flask import jsonify, request
 from engine.dp import dataProcess
 from flask_cors import CORS
-import sys
-import getopt
 import os
 
 app = Flask(__name__, static_url_path='')
