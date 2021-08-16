@@ -6,11 +6,15 @@ class dataProcess:
     def __init__(self):
         self.dbc = None
 
-    def db(self):
-        connection = pymysql.connect(host='localhost',
-                                     user='root',
-                                     password='lf',
-                                     database='yesorno',
+    def db(self, **kwargs):
+        dbhost = kwargs["dbhost"]
+        dbuser = kwargs["dbuser"]
+        dbpass = kwargs["dbpass"]
+        dbname = kwargs["dbname"]
+        connection = pymysql.connect(host=dbhost,
+                                     user=dbuser,
+                                     password=dbpass,
+                                     database=dbname,
                                      charset='utf8mb4',
                                      cursorclass=pymysql.cursors.DictCursor)
         self.dbc = connection
